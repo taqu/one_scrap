@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vector crawler"
+dynamic = ["version"]
+description = "Simple web crawling, embedding, upsering to a vector db."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Takuro Sakai", email = "taqu2920.dev@gmail.com"},
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "Scrapy>=2.11.0",
+    "langchain>=0.1.4",
+    "chromadb==0.4.22",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["build", "tests"]
+
