@@ -1,9 +1,9 @@
 [build-system]
-requires = ["setuptools", "setuptools_scm"]
+requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vector crawler"
+name = "vector-crawler"
 dynamic = ["version"]
 description = "Simple web crawling, embedding, upsering to a vector db."
 readme = "README.md"
@@ -18,9 +18,8 @@ classifiers = [
 dependencies = [
     "Scrapy>=2.11.0",
     "langchain>=0.1.4",
-    "chromadb==0.4.22",
+    "chromadb>=0.4.22",
+    "pysimplegui>=4.60.5",
 ]
-
-[tool.setuptools.packages.find]
-exclude = ["build", "tests"]
+[project.optional-dependencies]
 
